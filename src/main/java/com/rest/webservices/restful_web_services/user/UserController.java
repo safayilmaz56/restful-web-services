@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.management.AttributeNotFoundException;
 import java.net.URI;
 import java.util.List;
 
@@ -23,7 +24,13 @@ public class UserController {
 
     @GetMapping("/users/{id}")
     public User retrieveUser(@PathVariable int id){
-        return userDaoService.findOne(id);
+        User user = userDaoService.findOne(id);
+
+        if (user == null){
+            throw new UserNotFoundException("id: " + id);
+        }
+
+        return user;
     }
 
     @PostMapping("/users")
