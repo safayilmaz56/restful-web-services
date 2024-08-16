@@ -9,6 +9,9 @@ public class ErrorDetails {
     private String message;
     private String details;
 
+    public ErrorDetails() {
+    }
+
     public ErrorDetails(LocalDateTime timestamp, String message, String details) {
         this.timestamp = timestamp;
         this.message = message;
