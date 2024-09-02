@@ -11,7 +11,7 @@
 	<groupId>com.rest.webservices</groupId>
 	<artifactId>restful-web-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>restful-web-services</name>
+	<firstName>restful-web-services</firstName>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
