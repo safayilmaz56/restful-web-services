@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class User {
     private Integer id;
     @Size(min = 2, message = "Name should have at least 2 characters")
-    @JsonProperty("user_name")
+    @JsonProperty("user_name") // API'de alanın adını user_name olarak göstermeye yarar.
     private String name;
     @Past(message = "Birth date should be in the past")
     @JsonProperty("birth_date")
